@@ -1,0 +1,17 @@
+ 
+ {% extends 'dummy.html' %}
+    {% block title %}
+    <title>Organization Page</title>
+    {% endblock %}
+   
+    {% block body_block %}
+    <center>
+        <div>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Create">
+            </form>
+        </div>
+    </center>
+    {% endblock %}
